@@ -1,0 +1,14 @@
+user: postgres
+password: postgres
+host: localhost
+database: postgres
+port: 5432
+threads: 5
+schema: public
+target-base-path: file:///Users/soumilshah/IdeaProjects/SparkProject/apache-hudi-delta-streamer-labs/E4/hudidb/
+jar: /Users/soumilshah/IdeaProjects/SparkProject/apache-hudi-delta-streamer-labs/E5/jar/hudi-utilities-slim-bundle_2.12-0.14.0.jar
+skip_table:
+spark_submit_options:
+  packages: "org.apache.hudi:hudi-spark3.4-bundle_2.12:0.14.0,org.postgresql:postgresql:42.5.4"
+  table_type: COPY_ON_WRITE
+  operation: UPSERT
